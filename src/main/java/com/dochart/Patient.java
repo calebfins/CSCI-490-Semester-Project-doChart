@@ -1,7 +1,6 @@
 package com.dochart;
 
 import lombok.Data;
-import org.springframework.web.bind.annotation.PostMapping;
 
 import javax.persistence.*;
 
