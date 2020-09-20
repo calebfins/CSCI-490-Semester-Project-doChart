@@ -1,4 +1,14 @@
 
+CREATE DATABASE dochartpills;
+
+CREATE TABLE `dochartpills`.`pill_information` (
+  `DIN` INT NOT NULL,
+  `pill_name` VARCHAR(45) NOT NULL,
+  `pill_type` VARCHAR(45) NOT NULL,
+  `pill_temp` VARCHAR(45) NOT NULL,
+  `pill_company` VARCHAR(45) NOT NULL,
+  PRIMARY KEY (`DIN`));
+
 USE dochartpills;
 
 	INSERT INTO pill_information VALUES (02315963,"Zyrtec","Cetirizine","68 to 77F","Johnson & Johnson");
@@ -13,3 +23,5 @@ USE dochartpills;
      INSERT INTO pill_information VALUES ("00367729","Senna","generic Sennosides","68 to 77F","Sun Pharmaceutical Industries");
      INSERT INTO pill_information VALUES ("02364190","Fentanyl","Durogesic","68 to 77F","Insys Therapeutics Inc");
 	 INSERT INTO pill_information VALUES ("02238645","Codeine","Robitussin","68 to 77F","Johnson & Johnson");
+     
+     SELECT * FROM pill_information;
