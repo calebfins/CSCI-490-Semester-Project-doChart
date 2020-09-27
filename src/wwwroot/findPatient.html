@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>CNJ inc.</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<h2>DoChart Medical Records</h2>
+
+<div id="findPatient">
+<h2>Patient Search</h2>
+
+<p>Search by Patient Name or Patient ID:</p>
+<form class="search" action="/">
+  <input type="text" placeholder="First Name.." name="search">
+  <input type="text" placeholder="Last Name.." name="search">
+  <input type="text" placeholder="Mid Initial.." name="search">
+  
+  <button type="submit">search</button>
+</form>
+</div>
+
+<script>
+
+function findRecord(){
+	var x = document.getElementById("findRecord");
+	if(x.style.display === "none"){
+		x.style.display = "block";
+	} else {
+		x.style.display = "none";
+	}
+}
+</script>
+
+</body>
+</html>	
