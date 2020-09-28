@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="icon" type="image/png" href="pill_img/pillbottle.png">
+    <meta name="description" content="Pills in the DoChart Database">
+    <meta name="keywords" content="HTML,CSS,JavaScript">
+    <meta name="author" content="Jamecia Moore">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DoChart Pills</title>
+    <script>
+        function imageClick(url) {
+            window.location = url;
+        }
+    </script>
+</head>
+<style>
+    body {
+        background-image: url('pill_img/bg.jpg');
+        font-family: Helvetica, sans-serif;
+    }
+    
+    table.redTable {
+        border: 2px solid #A40808;
+        background-color: #EEE7DB;
+        width: 100%;
+        text-align: center;
+        margin-bottom: 250px;
+        border-collapse: collapse;
+    }
+    
+    table.redTable td,
+    table.redTable th {
+        border: 1px solid #AAAAAA;
+        padding: 3px 2px;
+    }
+    
+    table.redTable tbody td {
+        font-size: 13px;
+    }
+    
+    table.redTable tr:nth-child(even) {
+        background: #F5C8BF;
+    }
+    
+    table.redTable thead {
+        background: #A40808;
+    }
+    
+    table.redTable thead th {
+        font-size: 19px;
+        font-weight: bold;
+        color: #FFFFFF;
+        text-align: center;
+        border-left: 2px solid #A40808;
+    }
+    
+    table.redTable thead th:first-child {
+        border-left: none;
+    }
+    
+    table.redTable tfoot {
+        font-size: 13px;
+        font-weight: bold;
+        color: #FFFFFF;
+        background: #A40808;
+    }
+    
+    table.redTable tfoot td {
+        font-size: 13px;
+    }
+    
+    table.redTable tfoot .links {
+        text-align: right;
+    }
+    
+    table.redTable tfoot .links a {
+        display: inline-block;
+        background: #FFFFFF;
+        color: #A40808;
+        padding: 2px 8px;
+        border-radius: 5px;
+    }
+    
+    input {
+        margin-bottom: 60px;
+        border-radius: 30px;
+        width: 305px;
+        background-color: #F5C8BF;
+        margin-left: 500px;
+        padding: 15px;
+        height: 1px;
+    }
+    
+    .logo {
+        margin-left: 1200px;
+        margin-top: 20px;
+        height: 90px;
+    }
+</style>
+
+<body>
+
+    <!-- Will be changing the location of the pill image directs -->
+    <img src="pill_img/pills.png" title="Home" id="backHome" class="logo" alt="Image of pill/Floating" onclick="imageClick('https://www.w3schools.com/css/css_font.asp')">
+    <!-- Related to the table -->
+    <input type="text" name="search" id="search" placeholder="Enter Drug Identification Number..." />
+    <table class="redTable">
+        <thead>
+            <tr>
+                <th title="Field #1">DIN</th>
+                <th title="Field #2">Name</th>
+                <th title="Field #3">Type</th>
+                <th title="Field #4">Temperature</th>
+                <th title="Field #5">Company</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>367729</td>
+                <td>Senna</td>
+                <td>generic Sennosides</td>
+                <td>68 to 77F</td>
+                <td>Sun Pharmaceutical Industries</td>
+            </tr>
+            <tr>
+                <td>723770</td>
+                <td>Xanax</td>
+                <td>Alprazolam</td>
+                <td>68 to 77F</td>
+                <td>Pfizer</td>
+            </tr>
+            <tr>
+                <td>728284</td>
+                <td>Bumetanide</td>
+                <td>Bumex</td>
+                <td>68 to 77F</td>
+                <td>Pfizer</td>
+            </tr>
+            <tr>
+                <td>2238645</td>
+                <td>Codeine</td>
+                <td>Robitussin</td>
+                <td>68 to 77F</td>
+                <td>Johnson &amp; Johnson</td>
+            </tr>
+            <tr>
+                <td>2244521</td>
+                <td>Nexium</td>
+                <td>Esomeprazole</td>
+                <td>59 to 86F</td>
+                <td>AstraZeneca</td>
+            </tr>
+            <tr>
+                <td>2255340</td>
+                <td>Azithromycin</td>
+                <td>generic Zithromax</td>
+                <td>65 to 70F</td>
+                <td>Pfizer</td>
+            </tr>
+            <tr>
+                <td>2268426</td>
+                <td>Lyrica</td>
+                <td>Pregabalin</td>
+                <td>65 to 70F</td>
+                <td>Pfizer</td>
+            </tr>
+            <tr>
+                <td>2315963</td>
+                <td>Zyrtec</td>
+                <td>Cetirizine</td>
+                <td>68 to 77F</td>
+                <td>Johnson &amp; Johnson</td>
+            </tr>
+            <tr>
+                <td>2322978</td>
+                <td>Vyvanse</td>
+                <td>Lisdexamfetamine</td>
+                <td>68 to 77F</td>
+                <td>Takeda Pharmaceutical</td>
+            </tr>
+            <tr>
+                <td>2324253</td>
+                <td>Vicodin</td>
+                <td>Hydrocodone/Acetaminophen</td>
+                <td>68 to 77F</td>
+                <td>AbbVie Pharmaceuticals</td>
+            </tr>
+            <tr>
+                <td>2364190</td>
+                <td>Fentanyl</td>
+                <td>Durogesic</td>
+                <td>68 to 77F</td>
+                <td>Insys Therapeutics Inc</td>
+            </tr>
+            <tr>
+                <td>2372959</td>
+                <td>Simvastatin</td>
+                <td>FloLipid</td>
+                <td>68 to 77F</td>
+                <td> Merck</td>
+            </tr>
+        </tbody>
+    </table>
+    <script>
+        const searchInput = document.getElementById("search");
+        const rows = document.querySelectorAll("tbody tr");
+        console.log(rows);
+        searchInput.addEventListener("keyup", function(event) {
+            const q = event.target.value.toLowerCase();
+            rows.forEach((row) => {
+                row.querySelector("td").textContent.toLowerCase().startsWith(q) ?
+                    (row.style.display = "table-row") :
+                    (row.style.display = "none");
+            });
+        });
+    </script>
+</body>
+
+</html>
