@@ -1,0 +1,149 @@
+[
+  {
+    "DIN": 367729,
+    "pill_name": "Senna",
+    "pill_type": "generic Sennosides",
+    "pill_temp": "68 to 77F",
+    "pill_company": "Sun Pharmaceutical Industries"
+  },
+  {
+    "DIN": 406716,
+    "pill_name": "Amoxicillin",
+    "pill_type": "Novamoxin",
+    "pill_temp": "68 to 77F",
+    "pill_company": "LEDERLE LABORATORIES"
+  },
+  {
+    "DIN": 408183,
+    "pill_name": "Rhopressa",
+    "pill_type": "Netarsudil Ophthalmic",
+    "pill_temp": "68 to 77F",
+    "pill_company": "Grünenthal GmbH"
+  },
+  {
+    "DIN": 723770,
+    "pill_name": "Xanax",
+    "pill_type": "Alprazolam",
+    "pill_temp": "68 to 77F",
+    "pill_company": "Pfizer"
+  },
+  {
+    "DIN": 728284,
+    "pill_name": "Bumetanide",
+    "pill_type": "Bumex",
+    "pill_temp": "68 to 77F",
+    "pill_company": "Pfizer"
+  },
+  {
+    "DIN": 740861,
+    "pill_name": "Afrin Nasal Spray",
+    "pill_type": "Oxymetazoline",
+    "pill_temp": "68 to 77F",
+    "pill_company": "Navajo Manufacturing Company"
+  },
+  {
+    "DIN": 2238645,
+    "pill_name": "Codeine",
+    "pill_type": "Robitussin",
+    "pill_temp": "68 to 77F",
+    "pill_company": "Johnson & Johnson"
+  },
+  {
+    "DIN": 2244521,
+    "pill_name": "Nexium",
+    "pill_type": "Esomeprazole",
+    "pill_temp": "59 to 86F",
+    "pill_company": "AstraZeneca"
+  },
+  {
+    "DIN": 2247651,
+    "pill_name": "Terazol",
+    "pill_type": "Terconazole vaginal",
+    "pill_temp": "68 to 77F",
+    "pill_company": "The Perrigo Company"
+  },
+  {
+    "DIN": 2255340,
+    "pill_name": "Azithromycin",
+    "pill_type": "generic Zithromax",
+    "pill_temp": "65 to 70F",
+    "pill_company": "Pfizer"
+  },
+  {
+    "DIN": 2268426,
+    "pill_name": "Lyrica",
+    "pill_type": "Pregabalin",
+    "pill_temp": "65 to 70F",
+    "pill_company": "Pfizer"
+  },
+  {
+    "DIN": 2315963,
+    "pill_name": "Zyrtec",
+    "pill_type": "Cetirizine",
+    "pill_temp": "68 to 77F",
+    "pill_company": "Johnson & Johnson"
+  },
+  {
+    "DIN": 2322978,
+    "pill_name": "Vyvanse",
+    "pill_type": "Lisdexamfetamine",
+    "pill_temp": "68 to 77F",
+    "pill_company": "Takeda Pharmaceutical"
+  },
+  {
+    "DIN": 2323052,
+    "pill_name": "Inspra",
+    "pill_type": "Eplerenone",
+    "pill_temp": "50 to 86F",
+    "pill_company": "Pfizer"
+  },
+  {
+    "DIN": 2324253,
+    "pill_name": "Vicodin",
+    "pill_type": "Hydrocodone/Acetaminophen",
+    "pill_temp": "68 to 77F",
+    "pill_company": "AbbVie Pharmaceuticals"
+  },
+  {
+    "DIN": 2349469,
+    "pill_name": "Ultram",
+    "pill_type": "ConZip",
+    "pill_temp": "36F to 46F",
+    "pill_company": "Aerie Pharmaceuticals"
+  },
+  {
+    "DIN": 2364190,
+    "pill_name": "Fentanyl",
+    "pill_type": "Durogesic",
+    "pill_temp": "68 to 77F",
+    "pill_company": "Insys Therapeutics Inc"
+  },
+  {
+    "DIN": 2370603,
+    "pill_name": "Odefsey",
+    "pill_type": "Rilpivirine",
+    "pill_temp": "68 to 77F",
+    "pill_company": "Janssen Sciences Ireland UC"
+  },
+  {
+    "DIN": 2372959,
+    "pill_name": "Simvastatin",
+    "pill_type": "FloLipid",
+    "pill_temp": "68 to 77F",
+    "pill_company": " Merck"
+  },
+  {
+    "DIN": 2409100,
+    "pill_name": "Intuniv",
+    "pill_type": "Tenex",
+    "pill_temp": "68 to 77F",
+    "pill_company": "Eley Limited"
+  },
+  {
+    "DIN": 2471477,
+    "pill_name": "Rybelsus",
+    "pill_type": "Nemaglutide",
+    "pill_temp": "68 to 77F",
+    "pill_company": "Novo Nordisk"
+  }
+]
