@@ -4,7 +4,7 @@ $host = "localhost";
 $user = "root";
 $password = "10006778";
 $port = "3306";
-$db = "registration";
+$db = "dochart";
 
 $con = mysqli_connect($host, $user, $password, $db) or die("Failed");
 
@@ -28,8 +28,8 @@ if (isset($_POST['login'])) {
 
 
     if (sizeOf($errors) == 0) {
-        $query = "SELECT * FROM user WHERE username='$username' AND password='$pass'";
-        $queryTwo = "SELECT * FROM user WHERE username='$username'";
+        $query = "SELECT * FROM patient WHERE pUsername='$username' AND pPassword='$pass'";
+        $queryTwo = "SELECT * FROM patient WHERE pUsername='$username'";
         $result = mysqli_query($con, $query);
         $resultTwo = mysqli_query($con, $queryTwo);
 
@@ -56,9 +56,5 @@ if (isset($_POST['login'])) {
             array_push($errors,"User does not exist!");
         }
     }//sizeof
-    else
-    {
-
-    }
 
 }
