@@ -72,3 +72,20 @@ body {font-family: Verdana, sans-serif;}
     background: #a40cff;
     color: white !important
 }
+.days li .not {
+    padding: 5px;
+    background: #777;
+    color: white !important
+}
+
+.legend header {
+
+}
+
+.legend { list-style: none; }
+.legend li { float: left; margin-right: 10px; }
+.legend span { border: 1px solid #ccc; float: left; width: 12px; height: 12px; margin: 2px; }
+/* your colors */
+.legend .booked { background-color: #a40cff; }
+.legend .available { background-color: #eee; }
+.legend .unavailable { background-color: #777; }

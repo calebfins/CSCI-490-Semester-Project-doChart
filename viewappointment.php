@@ -4,6 +4,7 @@
     <link rel="stylesheet" href="calendarstyle.css">
     <title>Your Appointments</title>
 </head>
+
 <div class="month">
     <ul>
         <li class="prev">&#10094;</li>
@@ -13,13 +14,13 @@
 </div>
 
 <ul class="weekdays">
+    <li>Su</li>
     <li>Mo</li>
     <li>Tu</li>
     <li>We</li>
     <li>Th</li>
     <li>Fr</li>
     <li>Sa</li>
-    <li>Su</li>
 </ul>
 
 <ul class="days">
@@ -33,6 +34,7 @@
     <li>8</li>
     <li>9</li>
     <li><span class="active">10</span></li>
+    <li>11</li>
     <li>12</li>
     <li>13</li>
     <li>14</li>
@@ -46,7 +48,7 @@
     <li>22</li>
     <li>23</li>
     <li>24</li>
-    <li>25</li>
+    <li><span class="not">25</span></li>
     <li>26</li>
     <li>27</li>
     <li>28</li>
@@ -55,4 +57,12 @@
 
 
 
+</ul>
+<div class="legend header">
+    <b>Legend</b>
+</div>
+<ul class="legend">
+    <li><span class="booked"></span>Booked</li>
+    <li><span class="available"></span> Available</li>
+    <li><span class="unavailable"></span> Unavailable</li>
 </ul>
