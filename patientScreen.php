@@ -1,5 +1,11 @@
+<?php include('server.php'); ?>
 <!DOCTYPE html>
 <html lang="en">
+<?php
+$IDENTIFICATION = $_GET['username'];
+$USER_IDENTIFICATION = "NULL";
+$RESULT ="";
+?>
 <head>
     <link rel="stylesheet" href="layout.css">
     <link rel="stylesheet" href="mystyle.css">
@@ -14,10 +20,28 @@
 </head>
 
 <script>
-    function imageClick(url) {
-        window.location = url;
+    function imageClick(url) { window.location = url;
     }
 </script>
+
+<?php
+
+$NAME = "SELECT fName, lName FROM patient WHERE pUsername='$IDENTIFICATION'";
+if (isset($con)) {
+    $RESULT = mysqli_query($con,$NAME);
+}
+if ($RESULT->num_rows > 0) {
+    // output data of each row
+    while($row = $RESULT->fetch_assoc()) {
+        $FULL_NAME = $row["fName"] . " " . $row["lName"]  ;
+        $USER_IDENTIFICATION = $FULL_NAME;
+    }
+}
+
+echo "<p class='greeting'>Welcome $USER_IDENTIFICATION</p>"
+
+?>
+
 <div class="pate">
 
     <img src="pill_img/calendar.png" class="" width="180" height="175"  title="View Appointments" id="backHome"  alt="Image of pill/Floating" onclick="imageClick('schedule.php')">

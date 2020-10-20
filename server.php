@@ -122,7 +122,6 @@ else if (isset($_POST['login']))
 {
     $username = mysqli_real_escape_string($con, $_POST['username']);
     $pass = mysqli_real_escape_string($con, $_POST['pass']);
-
     // Insures that the username and password fields are entered properly
     if (empty($username))
     {
@@ -144,19 +143,22 @@ else if (isset($_POST['login']))
         if (mysqli_num_rows($result) == 1)
         {
             session_start();
+
+
             // This is here because doctors have a different screen
             /***
              *  This needs to be change to read in all the doctors usernames !
              */
             if ($username == 'doctor')
             {
+
                 header('location: pill.php'); # Create doctor screen
                 exit();
             }
             else
             {
                 // Patients login information goes here
-                header('location: patientScreen.php');
+                header('location: patientScreen.php?username='.$username );
                 exit();
             }
         }

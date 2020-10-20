@@ -42,6 +42,16 @@ body {
     border-radius: 10px;
     border-width: 30px;
 }
+.greeting
+{
+    float: top;
+    font-family: "Baskerville Old Face";
+    margin-left: 500px;
+    font-size: 40px;
+    outline-color: darkviolet;
+    color: #b3b3cb;
+    font-weight: bolder;
+}
 .btn
 {
     margin-top: 3%;
@@ -62,7 +72,7 @@ body {
 .pate
 {
     width: 75%;
-    margin-top: 12%;
+    margin-top: 8%;
     margin-left: auto;
     margin-right: auto;
 
