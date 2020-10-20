@@ -55,7 +55,10 @@ body {
     border-radius: 5px;
 
 }
-
+.form
+{
+    background-color: white;
+}
 .pate
 {
     width: 75%;

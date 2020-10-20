@@ -22,9 +22,7 @@
     </div>
 
 
-
     <div class="input-group">
-
         <button id="login" class="btn" type="submit" name="login" href="pill.php">Login</button>
     </div>
 
