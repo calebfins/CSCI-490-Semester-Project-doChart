@@ -7,7 +7,7 @@ body {font-family: Verdana, sans-serif;}
     width: 100%;
     background: #1abc9c;
     text-align: center;
-    background-color: #a40cff
+    background-color: rebeccapurple
 }
 
 /* Month list */
@@ -69,7 +69,7 @@ body {font-family: Verdana, sans-serif;}
 /* Highlight the "current" day */
 .days li .active {
     padding: 5px;
-    background: #a40cff;
+    background: rebeccapurple;
     color: white !important
 }
 .days li .not {
@@ -86,6 +86,6 @@ body {font-family: Verdana, sans-serif;}
 .legend li { float: left; margin-right: 10px; }
 .legend span { border: 1px solid #ccc; float: left; width: 12px; height: 12px; margin: 2px; }
 /* your colors */
-.legend .booked { background-color: #a40cff; }
+.legend .booked { background-color: rebeccapurple; }
 .legend .available { background-color: #eee; }
 .legend .unavailable { background-color: #777; }

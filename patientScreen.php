@@ -1,4 +1,4 @@
-<?php include('server.php'); ?>
+<?php //include('server.php'); ?>
 <!DOCTYPE html>
 <html lang="en">
 <?php
@@ -7,6 +7,7 @@ $USER_IDENTIFICATION = "NULL";
 $RESULT ="";
 ?>
 <head>
+    <title>Patient Portal</title>
     <link rel="stylesheet" href="layout.css">
     <link rel="stylesheet" href="mystyle.css">
     <style>
