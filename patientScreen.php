@@ -44,7 +44,7 @@ echo "<p class='greeting'>Welcome $USER_IDENTIFICATION</p>"
 
 <div class="pate">
 
-    <img src="pill_img/calendar.png" class="" width="180" height="175"  title="View Appointments" id="backHome"  alt="Image of pill/Floating" onclick="imageClick('schedule.php')">
+    <img src="pill_img/calendar.png" class="" width="180" height="175"  title="View Appointments" id="backHome"  alt="Image of pill/Floating" onclick="imageClick('viewappointment.php')">
 
     <img src="pill_img/doctor.png" class="float" title="Contact Doctor" id="backHome" width="180" height="180"  alt="Image of pill/Floating" onclick="imageClick('schedule.php')">
 <img src="pill_img/pills.png" class="float" title="View pills" id="backHome" width="180" height="180"   alt="Image of pill/Floating" onclick="imageClick('pill.php')">
