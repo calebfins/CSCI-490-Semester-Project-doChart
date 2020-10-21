@@ -14,6 +14,79 @@ $con = mysqli_connect($host, $user, $password, $db) or die("Failed");
 
 $errors = array(); # This stores all the errors so they can be displayed on the register / login page
 
+
+/***
+ *  This involves sending the patients message to the doctor. So, the doctor can contact them.
+ */
+if (isset($_POST['send_contact']))
+{
+
+    // This regards to the information being sent to the doctor
+    $patientIdentification = mysqli_real_escape_string($con, $_POST['PID']);
+    $patientUsername= mysqli_real_escape_string($con, $_POST['username']);
+    $doctorIdentification= mysqli_real_escape_string($con, $_POST['doctors']);
+    $message =  mysqli_real_escape_string($con, $_POST['message']);
+
+         // Meets the requirements so it can be added!
+         if (empty($patientUsername))
+        {
+            array_push($errors,"Patient username is needed!");
+        }
+        if(empty($patientIdentification))
+        {
+            array_push($errors,"Patient identification is needed!");
+        }
+        if(empty($doctorIdentification))
+        {
+            array_push($errors,"Patient must select doctor!");
+        }
+        if(empty($message))
+        {
+            array_push($errors,"Field can't be left blank");
+        }
+
+
+        // If all the requirements are met then it will be added to the database
+    if (sizeof($errors) == 0) {
+        // Adding the message into the database
+        $query = "INSERT INTO contactdoctor VALUES ('$message',$patientIdentification,$doctorIdentification)";
+        mysqli_query($con,$query);
+        header('location: patientScreen.php?username=' . $patientUsername);
+        exit();
+    }
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /**
  *  If the user is on the register page - register.php
  */
@@ -101,7 +174,7 @@ if (isset($_POST['register']))
         else if (mysqli_num_rows($result) == 0)
         {
           mysqli_query($con,$queryTwo);
-            header('location: patientScreen.php');
+            header('location: patientScreen.php?username='.$user1);
             exit();
         }
         else
@@ -175,4 +248,13 @@ else if (isset($_POST['login']))
         }
     }//sizeof
 
+
+
+    //
+
+    if (isset($_POST['message']))
+    {
+        header('location: patientScreen.php');
+        exit();
+    }
 }

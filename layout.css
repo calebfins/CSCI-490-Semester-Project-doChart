@@ -72,10 +72,15 @@ body {
 .pate
 {
     width: 75%;
-    margin-top: 8%;
+    margin-top: 5%;
     margin-left: auto;
     margin-right: auto;
 
+}
+.container {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
 }
 .extraFloat
 {
