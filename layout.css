@@ -82,6 +82,13 @@ body {
     background-color: #f2f2f2;
     padding: 20px;
 }
+
+.mal {
+    border-radius: 5px;
+    background-color:  #b3d9ff;
+    padding: 20px;
+}
+
 .extraFloat
 {
     margin-left: 40%;

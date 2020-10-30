@@ -1,10 +1,20 @@
 <?php include('server.php'); ?>
+
+<?php
+$username = file_get_contents("form-save.txt");
+if ($username == NULL)
+{
+    header('location: notLogged.php');
+    exit();
+}
+?>
 <!DOCTYPE>
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="form.css">
 </head>
 <body>
+
 
 
 <h1 class="header">Contact Form</h1>

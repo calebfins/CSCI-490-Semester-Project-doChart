@@ -1,3 +1,4 @@
+ECHO OFF
  <?php include('server.php'); ?>
 
  <script type="text/javascript">
@@ -53,3 +54,4 @@
 </form>
 </div>
 </html>
+PAUSE

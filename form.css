@@ -7,6 +7,16 @@ font-size: 15px;
 
 
 
+.head
+{
+
+    text-align: center;
+    font-size: 80px;
+    color: #ffffcc;
+    background-image: url('pill_img/diamond.png');
+    border-radius: 10px;
+    border-width: 30px;
+}
 
 .header
 {
@@ -27,6 +37,11 @@ input[type=text], select, textarea {
     margin-bottom: 16px;
     resize: vertical;
 }
+.contain {
+    border-radius: 5px;
+    background-color:  #b3d9ff;
+    padding: 20px;
+}
 .normal
 {
     color: grey;
@@ -42,6 +57,11 @@ input[type=text], select, textarea {
     text-align: center;
     border-radius: 5px;
 }
+
+.re
+{
+    background-color: #3399ff;
+}
 .narrow
 {
     width: 75%;
@@ -50,6 +70,15 @@ input[type=text], select, textarea {
 }
 input[type=submit] {
     background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[value=Book] {
+    background-color: #003399;
     color: white;
     padding: 12px 20px;
     border: none;

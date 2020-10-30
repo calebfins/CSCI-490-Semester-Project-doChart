@@ -1,0 +1,40 @@
+.narrow
+{
+    width: 50%;
+    margin-left: 250px;
+    background-image: url('pill_img/healthhis.jpg');
+}
+
+.results
+{
+    width: 50%;
+    background-image: url('pill_img/healthhis.jpg');
+}
+p
+{
+    font-size: 25px;
+}
+
+input[value="Display Health History"] {
+    margin-left: 290px;
+    height: 50px;
+}
+
+.borderList {
+    list-style-position:inside;
+    height: 50px;
+    font-size: 25px;
+    background-color: #75C7E6;
+    border-style: outset;
+    list-style-type: none;
+}
+
+h2
+{
+    font-family: "Baskerville Old Face";
+}
+
+mark {
+    background-color: #DDA0DD;
+    color: black;
+}

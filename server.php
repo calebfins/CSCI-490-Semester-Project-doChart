@@ -14,6 +14,67 @@ $con = mysqli_connect($host, $user, $password, $db) or die("Failed");
 
 $errors = array(); # This stores all the errors so they can be displayed on the register / login page
 
+/***
+ *
+ * This involves booking the appointments
+ */
+if (isset($_POST['send_book']))
+{
+    date_default_timezone_set("America/New_York");
+
+
+    // This regards to the information about booking appointments
+    $patientIdentification = mysqli_real_escape_string($con, $_POST['PID']);
+    $patientUsername= mysqli_real_escape_string($con, $_POST['username']);
+    $doctorIdentification= mysqli_real_escape_string($con, $_POST['doctors']);
+    $reason = mysqli_real_escape_string($con, $_POST['reason']);
+    $height = mysqli_real_escape_string($con, $_POST['height']);
+    $weight = mysqli_real_escape_string($con, $_POST['weight']);
+    $symptoms = mysqli_real_escape_string($con, $_POST['symptoms']);
+    $time =  date("h:i");
+    $date = "11/25/2020";
+    $fill = 10101010;
+    $appID = rand(90000,99999);
+
+    // Meets the requirements so it can be added!
+    if (empty($patientUsername))
+    {
+        array_push($errors,"Patient username is needed!");
+    }
+    if(empty($patientIdentification))
+    {
+        array_push($errors,"Patient identification is needed!");
+    }
+    if(empty($doctorIdentification))
+    {
+        array_push($errors,"Patient must select doctor!");
+    }
+    if(empty($reason))
+    {
+        array_push($errors,"Reason must be filled out");
+    }
+    if(empty($height))
+    {
+        array_push($errors,"Height must be entered or n/a");
+    }
+    if(empty($weight))
+    {
+        array_push($errors,"Weight must be entered or 0");
+    }
+
+    if(empty($symptoms))
+    {
+        array_push($errors,"Symptoms can't be left blank");
+    }
+
+    if(sizeof($errors)==0)
+    {
+        $query = "INSERT INTO appointment VALUES ($appID, '$reason', '$height',$weight, '$symptoms','$time','$date', '$fill')";
+        mysqli_query($con,$query);
+        header('location: patientScreen.php?username=' . $patientUsername);
+        exit();
+    }
+}//send_book
 
 /***
  *  This involves sending the patients message to the doctor. So, the doctor can contact them.
@@ -60,38 +121,12 @@ if (isset($_POST['send_contact']))
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /**
  *  If the user is on the register page - register.php
  */
 if (isset($_POST['register']))
 {
+    file_put_contents("form-save.txt", "");
     // Regards the user login information
     $user1 = mysqli_real_escape_string($con, $_POST['username']);
     $pass1 = mysqli_real_escape_string($con, $_POST['pass']);
@@ -173,7 +208,14 @@ if (isset($_POST['register']))
         // Means that all the requirements are MET - USER is added to the database
         else if (mysqli_num_rows($result) == 0)
         {
-          mysqli_query($con,$queryTwo);
+            // Saves the users, username to the file
+            extract($_REQUEST);
+            $file = fopen("form-save.txt", "a");
+            fwrite($file, $user1 . "");
+
+            fclose($file);
+
+            mysqli_query($con,$queryTwo);
             header('location: patientScreen.php?username='.$user1);
             exit();
         }
@@ -230,8 +272,16 @@ else if (isset($_POST['login']))
             }
             else
             {
+                extract($_REQUEST);
+                $file = fopen("form-save.txt", "a");
+                fwrite($file, $username . "");
+
+                fclose($file);
+
+                $send = file_get_contents("form-save.txt");
+
                 // Patients login information goes here
-                header('location: patientScreen.php?username='.$username );
+                header('location: patientScreen.php?username='.$send );
                 exit();
             }
         }
