@@ -58,10 +58,25 @@ input[type=text], select, textarea {
     border-radius: 5px;
 }
 
+.bookDate
+{
+    height: 30px;
+    width: 200px;
+    margin-bottom: 20px;
+}
 .re
 {
     background-color: #3399ff;
 }
+
+.alabel{
+    display: block;
+    text-align: left;
+    margin-left: 40%;
+    font-weight: lighter;
+
+}
+
 .narrow
 {
     width: 75%;

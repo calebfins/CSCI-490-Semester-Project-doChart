@@ -18,7 +18,7 @@
     </script>
 </head>
     <div class="center">
-        <img src="pill_img/goodbye.gif" width="1500px" alt="Doctor waving goodbye" onclick="imageClick('login.php')">
+        <img src="pill_img/goodbye.gif" width="100%"  height="100%" alt="Doctor waving goodbye" onclick="imageClick('login.php')">
     </div>
 
     <script type="text/javascript">

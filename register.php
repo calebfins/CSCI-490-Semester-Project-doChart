@@ -6,12 +6,12 @@
 
         body
         {
-            background-image: url('pill_img/portal.png');
+            background-image: url('pill_img/register.jpg');
 
         }
     </style>
 </head>
-    <div class="center" class="form">
+    <div class="center2" class="form">
         <form method="post" action="register.php" class="form">
             <h1 class="header">DoChart Registration</h1>
             <?php include('error.php'); ?>
@@ -49,8 +49,20 @@
             </div>
 
             <div class="input-group">
-                <label class="label">Blood Type:</label>
-                <input type="text" name="blood" id="blood" placeholder="BloodType">
+                <label name="blood" id="blood" class="label">Blood Type:</label>
+
+                <select class="si" name="blood" id="blood">
+                    <option value="O">O</option>
+                    <option value="O-">O-</option>
+                    <option value="O+">O+</option>
+                    <option value="A">A</option>
+                    <option value="A+">A+</option>
+                    <option value="A-">A-</option>
+                    <option value="B">B</option>
+                    <option value="B-">B-</option>
+                    <option value="B+">B+</option>
+                    <option value="UK">Unknown</option>
+                </select>
             </div>
 
             <div class="input-group">

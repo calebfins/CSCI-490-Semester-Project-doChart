@@ -77,6 +77,11 @@ body {font-family: Verdana, sans-serif;}
     background: #777;
     color: white !important
 }
+.days li .show {
+    padding: 5px;
+    background: darkorange;
+    color: white !important
+}
 
 .legend header {
 
@@ -89,3 +94,4 @@ body {font-family: Verdana, sans-serif;}
 .legend .booked { background-color: rebeccapurple; }
 .legend .available { background-color: #eee; }
 .legend .unavailable { background-color: #777; }
+.legend .yourA { background-color: darkorange; }

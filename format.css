@@ -21,9 +21,11 @@ input[value="Display Health History"] {
 }
 
 .borderList {
+    margin-top: 10px;
     list-style-position:inside;
     height: 50px;
     font-size: 25px;
+    margin-bottom: 10px;
     background-color: #75C7E6;
     border-style: outset;
     list-style-type: none;

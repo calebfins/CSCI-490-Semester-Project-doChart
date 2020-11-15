@@ -1,3 +1,44 @@
+<?php include('server.php') ?>
+<?php
+$username = file_get_contents("form-save.txt");
+$RESULT = " ";
+$DATE = " ";
+
+$ID = 0;
+$MONTH = " ";
+$YA = NULL;
+$ad = 0;
+$PATIENT_BOOKED_APPOINTMENT = 0;
+// Finds the ID
+$ID = 0;
+$FIND_ID = "SELECT patientID FROM patient WHERE pUsername='$username'";
+if (isset($con)) {
+    $RESULT = mysqli_query($con,$FIND_ID);
+}
+if ($RESULT->num_rows > 0) {
+    // output data of each row
+    while($row = $RESULT->fetch_assoc()) {
+        $CONTAINS_ID = $row["patientID"];
+        $ID = $CONTAINS_ID;
+    }
+}
+
+
+$FIELD = "SELECT date FROM appointment WHERE Prescription_DIN='$ID'";
+if (isset($con)) {
+    $DATE = mysqli_query($con,$FIELD);
+}
+if ($DATE->num_rows > 0) {
+    // output data of each row
+    while($row = $DATE->fetch_assoc()) {
+      $YA = $row["date"];
+      $MONTH = $row["date"];
+
+    }
+}
+
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,9 +48,39 @@
 
 <div class="month">
     <ul>
-        <li class="prev">&#10094;</li>
+
         <li class="next">&#10095;</li>
-        <li>November<br><span style="font-size:20px">2020</span></li>
+        <?php
+
+        // Get the date string
+
+        if (empty($MONTH))
+        {
+            $ad = $MONTH[0] . $MONTH[1];
+        }
+        else
+        {
+            $ad = 11;
+        }
+
+        $month_name = date("F", mktime(0, 0, 0, $ad, 10));
+        $username = $username = file_get_contents("form-save.txt");
+        $RESULT = NULL;
+        // Finds the ID
+        $ID = 0;
+        $FIND_ID = "SELECT patientID FROM patient WHERE pUsername='$username'";
+        if (isset($con)) {
+            $RESULT = mysqli_query($con,$FIND_ID);
+        }
+        if ($RESULT->num_rows > 0) {
+            // output data of each row
+            while($row = $RESULT->fetch_assoc()) {
+                $CONTAINS_ID = $row["patientID"];
+                $ID = $CONTAINS_ID;
+            }
+        }
+        echo "<li>$month_name<br><span style='font-size:20px'>2020</span><li>";
+        ?>
     </ul>
 </div>
 
@@ -24,36 +95,42 @@
 </ul>
 
 <ul class="days">
-    <li>1</li>
-    <li>2</li>
-    <li>3</li>
-    <li>4</li>
-    <li>5</li>
-    <li>6</li>
-    <li>7</li>
-    <li>8</li>
-    <li>9</li>
-    <li><span class="active">10</span></li>
-    <li>11</li>
-    <li>12</li>
-    <li>13</li>
-    <li>14</li>
-    <li>15</li>
-    <li>16</li>
-    <li>17</li>
-    <li>18</li>
-    <li>19</li>
-    <li>20</li>
-    <li>21</li>
-    <li>22</li>
-    <li>23</li>
-    <li>24</li>
-    <li><span class="not">25</span></li>
-    <li>26</li>
-    <li>27</li>
-    <li>28</li>
-    <li>29</li>
-    <li>30</li>
+
+    <?php
+
+
+        if(empty($YA))
+        {
+            $PATIENT_BOOKED_APPOINTMENT = 0;
+        }
+        else
+        {
+            $PATIENT_BOOKED_APPOINTMENT = $YA[3] . $YA[4];
+        }
+
+    for ($x = 1; $x <= 30; $x++) {
+
+
+
+        if ($x==10 OR $x==21 OR $x==27)
+        {
+          echo  "<li><span class='not''>$x</span></li>";
+        }
+        // Determining their appointment
+      else  if ($x==$PATIENT_BOOKED_APPOINTMENT)
+        {
+            echo  "<li><span class='show''>$x</span></li>";
+        }
+      else if ($x < 9 OR $x==22)
+      {
+          echo  "<li><span class='active''>$x</span></li>";
+      }
+        else
+        {
+            echo "<li class='ali'>$x</li>";
+        }
+    }
+    ?>
 
 
 
@@ -65,4 +142,5 @@
     <li><span class="booked"></span>Booked</li>
     <li><span class="available"></span> Available</li>
     <li><span class="unavailable"></span> Unavailable</li>
+    <li><span class="yourA"></span> Your Appointment</li>
 </ul>

@@ -19,7 +19,7 @@ if ($RESULT->num_rows > 0) {
 
 
 
-echo "<h2>This information is intended for the patient <mark>$USER_IDENTIFICATION</mark>, and if you are viewing the screen <mark>and NOT $USER_IDENTIFICATION, Exit immediately! NOT doing so will</mark> result in a <mark>criminal investigation.</mark> Viewing others personal information at <mark>DoChart is a violation of HIPAA and patient conduct!</mark></h2>";
+echo "<h1>This information is intended for the patient <mark>$USER_IDENTIFICATION</mark>, and if you are viewing the screen <mark>and NOT $USER_IDENTIFICATION, Exit immediately! NOT doing so will</mark> result in a <mark>criminal investigation.</mark> Viewing others personal information at <mark>DoChart is a violation of HIPAA and patient conduct!</mark></h1>";
 
 
 ?>
@@ -34,8 +34,6 @@ echo "<h2>This information is intended for the patient <mark>$USER_IDENTIFICATIO
         }
         </style>
     </head>
-
-
     <body>
 
 <div class="narrow">
@@ -82,7 +80,7 @@ if (isset($_POST['display_health']))
     }
     else
     {
-        echo "<div class='narrow'><li class='borderList'>No results at this moment, check back later.</li></div><br>";
+        echo "<div><li class='borderList'>No results at this moment, check back later.</li></div><br>";
     }
     echo "<mark>Reports for $USER_IDENTIFICATION on " . date("m/d/y") . " at " . date("h:i:sa"). "</mark>";
 }//

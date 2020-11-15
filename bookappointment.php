@@ -41,6 +41,11 @@
         <label for="Height">Height:</label>
         <input type="text" id="height" name="height" placeholder="Height">
 
+        <div class="input-group">
+            <label>Date:</label>
+            <input class="bookDate" type="date" id="date" name="date">
+        </div>
+
         <label for="Weight">Weight:</label>
         <input type="text" id="weight" name="weight" placeholder="Weight">
 
